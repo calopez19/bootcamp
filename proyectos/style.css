@@ -1,0 +1,65 @@
+#tarjeta {
+    background-color: rgb(163, 163, 113);
+    width: 550px;
+    height: 300px;
+    border: 2px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#div1 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+}
+#izq {
+    width: 50%;
+}
+
+#imagen {
+    width: 50%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+#div2 {
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+#div2 div {
+    width: 50%;
+    text-align: center;
+    gap: 5 px;
+}
+
+#inputdiv {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#inputdiv input{
+    margin: 10px;
+    width: 120px;
+    margin-left: 80px;
+    color: gray;
+    text-align: center;
+}
+
+#div3 {
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+}
+#div3 input {
+    width: 125px;
+    height: 35px;
+    font-family: "Dancing Script", cursive;
+}
+
+#tarjeta {
+    border-radius: 10px;
+}
