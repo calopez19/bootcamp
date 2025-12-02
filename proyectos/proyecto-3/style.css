@@ -20,7 +20,7 @@ body > header {
         transition: 0.5s;
         align-self: center;
         &:hover {
-            display: flex;
+             /* display: flex;
             flex-direction: column;
             text-decoration: none;
             align-items: center;
@@ -29,6 +29,10 @@ body > header {
             width: 6rem;
             background-color: rgba(51, 158, 197);;
             transform: scale(1.1);
+            color: white; */
+            outline: 8px solid rgba(51, 158, 197);
+            background-color: rgba(51, 158, 197);
+            text-decoration: none;
             color: white;
         }
     }
@@ -36,7 +40,7 @@ body > header {
 
 nav {
     display: flex;
-    gap: 0.5rem;
+    gap: 1.5rem;
     align-items: center;
     cursor: pointer;
 }
