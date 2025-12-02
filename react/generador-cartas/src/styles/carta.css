@@ -1,0 +1,31 @@
+.contenedor-carta {
+    padding-top: 15px;
+    height: 370px;
+    width: 300px;
+    background-color: white;
+    font-size: xx-large;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.75);
+}
+
+.rojo {
+    color: red;
+}
+
+.negro {
+    color: black;
+}
+
+.left {
+    display: flex;
+    justify-content: baseline;
+    padding-left: 20px;
+}
+
+.right {
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+}
