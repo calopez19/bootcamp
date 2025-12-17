@@ -3,7 +3,7 @@ import { Color } from "./Colors";
 
 export function Home() {
   let [auto, setAuto] = useState(false);
-  let [color, setColor] = useState("red");
+  let [color, setColor] = useState(false);
   let [showPurple, setShowPurple] = useState(false);
   let colors = ["red", "yellow", "green", "purple"];
 
@@ -11,15 +11,10 @@ export function Home() {
     if (auto) {
       let tiempo;
       let n = !showPurple ? colors.length - 1 : colors.length;
-      for (let index = 0; index < n; index++) {
-        if (index === n - 1) {
-          tiempo = setTimeout(() => setColor(colors[0]), 1000);
-          break;
-        } else if (color === colors[index]) {
-          tiempo = setTimeout(() => setColor(colors[index + 1]), 5000);
-          break;
-        }
-      }
+
+      let index = colors.indexOf(color);
+      let newColor = index === n - 1 ? colors[0] : colors[index + 1];
+      tiempo = setTimeout(() => setColor(newColor), 1000);
       return () => {
         clearTimeout(tiempo);
       };
@@ -38,7 +33,8 @@ export function Home() {
                 : " rgba(131, 16, 16, 0.88)"
             }
             onClick={() => {
-              setColor("red");
+              let newColor = color === "red" ? false : "red";
+              setColor(newColor);
             }}
             selected={color === "red" ? "selected" : ""}
             show={true}
@@ -51,7 +47,8 @@ export function Home() {
                 : " rgba(178, 180, 22, 0.88)"
             }
             onClick={() => {
-              setColor("yellow");
+              let newColor = color === "yellow" ? false : "yellow";
+              setColor(newColor);
             }}
             selected={color === "yellow" ? "selected" : ""}
             show={true}
@@ -64,7 +61,8 @@ export function Home() {
                 : "rgba(29, 143, 44, 0.88)"
             }
             onClick={() => {
-              setColor("green");
+              let newColor = color === "green" ? false : "green";
+              setColor(newColor);
             }}
             selected={color === "green" ? "selected" : ""}
             show={true}
@@ -76,7 +74,8 @@ export function Home() {
                 : "rgba(82, 29, 143, 0.88)"
             }
             onClick={() => {
-              setColor("purple");
+              let newColor = color === "purple" ? false : "purple";
+              setColor(newColor);
             }}
             selected={color === "purple" ? "selected" : ""}
             show={showPurple}
