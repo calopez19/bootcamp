@@ -1,5 +1,69 @@
 .categories {
-  height: 50px;
-  width: 80%;
-  background-color: aqua;
+  height: 23em;
+  width: 90%;
+  margin-top: 10px;
+  background-color: transparent;
+  h1 {
+    position: relative;
+    -webkit-text-fill-color: var(--color-fondo);
+    -webkit-text-stroke: 1px white;
+  }
+  h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  left: 0%; /* Centra un borde del 50% */
+  width: 20%; /* Porcentaje del ancho que abarcará */
+  height: 4px; /* Grosor del "borde" */
+  background-color: var(--color-letra); /* Color del borde */
+}
+}
+
+.cardContainer {
+  height: 20em;
+  margin: 10px auto 0 auto;
+  display: flex;
+  gap: 2rem;
+  scroll-behavior: smooth;
+  anchor-name: --carousel;
+  scroll-snap-type: x mandatory;
+}
+
+.cardContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cardContainer::scroll-button(right) {
+  content: '➡';
+  background-color: var(--color-letra);
+  font-size: 1rem;
+  color: white;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  padding-bottom: .1rem;
+  cursor: pointer;
+  position: fixed;
+  position-anchor: --carousel;
+  position-area: right center;
+}
+.cardContainer::scroll-button(left) {
+  content: '⬅';
+  background-color: var(--color-letra);
+  font-size: 1rem;
+  color: white;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  padding-bottom: .1rem;
+  cursor: pointer;
+  position: fixed;
+  position-anchor: --carousel;
+  position-area: left center;
+
+}
+
+.cardContainer::scroll-button(right):disabled, .cardContainer::scroll-button(left):disabled {
+  opacity: 0.5;
+  cursor: auto;
 }

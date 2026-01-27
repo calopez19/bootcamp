@@ -3,31 +3,18 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Card } from "./components/Card";
 import { Category } from "./components/Category";
+import { useStar } from "./hooks/useStar";
 
 function App() {
   const [categories, setcategories] = useState([]); // 1. Estado para los datos
   const [loading, setLoading] = useState(true); // 2. Estado de carga
-  const [error, setError] = useState(null); // 3. Estado de error
-  const stars = useMemo(() => {
-    const layer = [];
-    for (let index = 0; index < 200; index++) {
-      const x = Math.floor(Math.random() * 100);
-      const y = Math.floor(Math.random() * 100);
-      // Sintaxis CSS: x-offset y-offset blur color
-      layer.push(`${x}vw ${y}vh 0 white`);
-    }
-
-    // Retornamos el objeto de estilo con la propiedad correcta (boxShadow)
-    return { boxShadow: layer.join(",") };
-  }, []);
-
+  const [error, setError] = useState(null); // 3. Estado de error  
   useEffect(() => {
     // Definimos la función asíncrona DENTRO del useEffect
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch("https://www.swapi.tech/api");
-
+        const response = await fetch("src/jsons/api.json");
         if (!response.ok) {
           throw new Error("Error al obtener los datos");
         }
@@ -46,9 +33,11 @@ function App() {
 
   return (
     <div className="space">
-      <div className="star" style={stars}></div>
+      <div className="star" style={useStar({duration:80, size:1, quantity:200})}></div>
+      <div className="star" style={useStar({duration:40, size:2, quantity:100})}></div>
+      <div className="star" style={useStar({duration:20, size:4, quantity:50})}></div>
       <Navbar />
-      <main >
+      <main>
         {categories.map((category, index) => (
           <Category key={index}>{category}</Category>
         ))}
@@ -58,3 +47,6 @@ function App() {
 }
 
 export default App;
+
+
+newFavorite[page] = newFavorite[page]

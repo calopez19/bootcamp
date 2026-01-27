@@ -1,25 +1,20 @@
 article {
-  height: 250px;
-  width: 200px;
-  background-color: white;
-  position: relative;
-  border-radius: 12px;
-    mask: 
-      linear-gradient(135deg, #000 calc(100% - 40px), transparent 0);
-
-    /* Sombra opcional (Nota: drop-shadow funciona mejor con formas recortadas que box-shadow) */
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
-    
-    overflow: hidden;
+  scroll-snap-align: start;
+  background-color: rgba(29, 30, 31, 0.5);
+  height: 18em;
+  padding: 1em;
+  border-radius: 1.5em;
+  text-align: center;
+  flex: 0 0 13.5em;
+}
+img {
+  border-radius: 0.5em;
+  height: auto;
+  width: 100%;
 }
 
-article::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    background-color: (#e40505,transparent);
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
-  }
+.containerImg {
+  overflow-y: hidden;
+  width: 100%;
+  height: 75%;
+}

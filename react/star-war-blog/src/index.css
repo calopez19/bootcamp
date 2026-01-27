@@ -8,6 +8,7 @@
   margin: 0px;
   padding: 0px;
   font-family: "Barlow Condensed", sans-serif;
+  overflow: scroll;
 }
 
 .space {
@@ -20,4 +21,11 @@
   width: var(--size);
   height: var(--size);
   background: white;
+  position: fixed;
+  animation: moveStars var(--duration,20s) linear infinite;
+}
+
+@keyframes moveStars {
+  from {transform: translateY(0);}
+  to {transform: translateY(-100vh);}
 }

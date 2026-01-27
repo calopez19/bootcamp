@@ -1,9 +1,11 @@
 import '../styles/Card.css'
-
+import anakin from '../images/1.jpg'
 export function Card() {
   return (
     <article>
-      <p>hola</p>
+      <div className='containerImg'>
+        <img src={anakin} alt=""/>
+      </div>
     </article>
   )
 }
