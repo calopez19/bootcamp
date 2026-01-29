@@ -14,7 +14,7 @@ function App() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch("src/jsons/api.json");
+        const response = await fetch("../public/jsons/api.json");
         if (!response.ok) {
           throw new Error("Error al obtener los datos");
         }
@@ -38,8 +38,8 @@ function App() {
       <div className="star" style={useStar({duration:20, size:4, quantity:50})}></div>
       <Navbar />
       <main>
-        {categories.map((category, index) => (
-          <Category key={index}>{category}</Category>
+        {loading?  <h1>cargando</h1> :categories.map((category, index) => (
+          <Category key={category}>{category}</Category>
         ))}
       </main>
     </div>
@@ -48,5 +48,3 @@ function App() {
 
 export default App;
 
-
-newFavorite[page] = newFavorite[page]

@@ -1,0 +1,80 @@
+{
+  "message": "ok",
+  "total_records": 37,
+  "total_pages": 4,
+  "previous": null,
+  "next": "https://www.swapi.tech/api/species?page=2&limit=10",
+  "results": [
+    {
+      "uid": "1",
+      "name": "Human",
+      "url": "https://www.swapi.tech/api/species/1"
+    },
+    {
+      "uid": "2",
+      "name": "Droid",
+      "url": "https://www.swapi.tech/api/species/2"
+    },
+    {
+      "uid": "3",
+      "name": "Wookie",
+      "url": "https://www.swapi.tech/api/species/3"
+    },
+    {
+      "uid": "4",
+      "name": "Rodian",
+      "url": "https://www.swapi.tech/api/species/4"
+    },
+    {
+      "uid": "5",
+      "name": "Hutt",
+      "url": "https://www.swapi.tech/api/species/5"
+    },
+    {
+      "uid": "6",
+      "name": "Yoda's species",
+      "url": "https://www.swapi.tech/api/species/6"
+    },
+    {
+      "uid": "7",
+      "name": "Trandoshan",
+      "url": "https://www.swapi.tech/api/species/7"
+    },
+    {
+      "uid": "8",
+      "name": "Mon Calamari",
+      "url": "https://www.swapi.tech/api/species/8"
+    },
+    {
+      "uid": "9",
+      "name": "Ewok",
+      "url": "https://www.swapi.tech/api/species/9"
+    },
+    {
+      "uid": "10",
+      "name": "Sullustan",
+      "url": "https://www.swapi.tech/api/species/10"
+    }
+  ],
+  "apiVersion": "1.0",
+  "timestamp": "2026-01-27T22:51:04.271Z",
+  "support": {
+    "contact": "admin@swapi.tech",
+    "donate": "https://www.paypal.com/donate/?business=2HGAUVTWGR5T2&no_recurring=0&item_name=Support+Swapi+and+keep+the+galaxy%27s+data+free%21+Your+donation+fuels+open-source+innovation+and+helps+us+grow.+Thank+you%21+%F0%9F%9A%80&currency_code=USD",
+    "partnerDiscounts": {
+      "saberMasters": {
+        "link": "https://www.swapi.tech/partner-discount/sabermasters-swapi",
+        "details": "Use this link to automatically get $10 off your purchase!"
+      },
+      "heartMath": {
+        "link": "https://www.heartmath.com/ryanc",
+        "details": "Looking for some Jedi-like inner peace? Take 10% off your heart-brain coherence tools from the HeartMath Institute!"
+      }
+    }
+  },
+  "social": {
+    "discord": "https://discord.gg/zWvA6GPeNG",
+    "reddit": "https://www.reddit.com/r/SwapiOfficial/",
+    "github": "https://github.com/semperry/swapi/blob/main/CONTRIBUTORS.md"
+  }
+}
